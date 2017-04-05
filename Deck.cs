@@ -6,6 +6,7 @@ namespace ConsoleApplication
     public class Deck
     {
         public List<Card> cards = new List<Card>();
+        public List<Card> discards = new List<Card>();
         public string[] suits = {"Hearts", "Diamonds", "Spades", "Clubs"};
         private Random rand = new Random();
         public Deck()
@@ -38,6 +39,12 @@ namespace ConsoleApplication
                 cards[i] = cards[myRand];
                 cards[myRand] = tempCard;
             }
+        }
+
+        public Card ShowDiscard(){
+            Card topCard = discards[discards.Count - 1];
+            return topCard;
+            // System.Console.WriteLine("The card on the discard pile is a(n) " + topCard.ToString());
         }
     }
 }
