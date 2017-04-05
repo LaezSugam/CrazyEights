@@ -27,5 +27,11 @@ namespace ConsoleApplication
                 stringVal = value.ToString();
             }
         }
+
+        public override string ToString(){
+            string str = "";
+            str += stringVal + " of " + suit;
+            return str;
+        }
     }
 }
