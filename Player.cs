@@ -13,7 +13,12 @@ namespace ConsoleApplication
         }
 
         public void Draw(Deck myDeck){
-            hand.Add(myDeck.Deal());
+            if (myDeck.cards.Count > 0){
+                hand.Add(myDeck.Deal());
+            }
+            else {
+                System.Console.WriteLine("The draw pile is empty, you cannot draw. Either - Pass - Quit - or play a valid card.");
+            }
         }
 
         public Card Discard(int cardNum){
@@ -25,6 +30,14 @@ namespace ConsoleApplication
             else {
                 return null;
             }
+        }
+
+        public string ShowHand(){
+            string str = "";
+            foreach (Card card in hand){
+                str += card.ToString() + " | ";
+            }
+            return str;
         }
         
     }

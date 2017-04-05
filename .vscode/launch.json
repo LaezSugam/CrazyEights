@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.0\\GoFish.dll",
+            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.0\\CrazyEights.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
             "console": "internalConsole",
