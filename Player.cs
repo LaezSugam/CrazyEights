@@ -35,7 +35,7 @@ namespace ConsoleApplication
         public string ShowHand(){
             string str = "";
             foreach (Card card in hand){
-                str += card.ToString() + " | ";
+                str += " | " + card.ToString();
             }
             return str;
         }
